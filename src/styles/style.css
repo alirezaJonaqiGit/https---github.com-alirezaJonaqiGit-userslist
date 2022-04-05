@@ -1,0 +1,11 @@
+.textField {
+    width: 100%;
+    margin: .5rem 0!important;
+    padding: .1rem 0 !important;
+}
+.submitFormBtn {
+    margin-top: 2rem;
+}
+body {
+    padding-bottom: 5rem;
+}

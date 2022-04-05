@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import UsersTable from './components/usersTable';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+
+const theme = createTheme({
+  direction: 'rtl', // Both here and <body dir="rtl">
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className='container'>
+        <h1 className='text-center my-3'>لیست کاربران</h1>
+        <UsersTable />
+      </div>    
+    </ThemeProvider>
   );
 }
 
