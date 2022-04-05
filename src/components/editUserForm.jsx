@@ -20,9 +20,11 @@ const useStyles = makeStyles((theme) => ({
     errMsg: {
         color: "#ef3948",
         position: 'absolute',
-        right: "0",
+        left: "0",
         top: "100%",
-        fontSize: '.8rem'
+        fontSize: '.8rem',
+        textAlign: 'right!important',
+        direction: 'rtl!important'
     }
 }));
 
