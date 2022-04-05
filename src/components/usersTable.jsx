@@ -20,6 +20,7 @@ const useStyles = makeStyles({
     tableRow: {
     },
     tableCell: {
+        direction: 'rtl!important',
         textAlign: 'right!important',
     }
 });
@@ -43,7 +44,7 @@ export default function UsersTable() {
 
     return (
         <TableContainer className='shadow rounded' component={Paper}>
-            <Table className={classes.table} aria-label="simple table">
+            <Table dir='rtl' className={classes.table} aria-label="simple table">
                 <TableHead>
                     <TableRow className={classes.tableRow}>
                         <TableCell className={classes.tableCell}>نام کاربری</TableCell>
@@ -57,10 +58,10 @@ export default function UsersTable() {
                 </TableHead>
                 <TableBody>
                     {users.map((user, index) => (
-                        <TableRow key={index}>
-                            <TableCell align="right">{`${user.first_name} ${user.last_name}`}</TableCell>
-                            <TableCell align="right">{user.id}</TableCell>
-                            <TableCell align="right">
+                        <TableRow  key={index}>
+                            <TableCell className={classes.tableCell}>{`${user.first_name} ${user.last_name}`}</TableCell>
+                            <TableCell className={classes.tableCell}>{user.id}</TableCell>
+                            <TableCell className={classes.tableCell}>
                                 <EditUserModal users={users} user={user} setUsers={setUsers} />
                             </TableCell>
                         </TableRow>

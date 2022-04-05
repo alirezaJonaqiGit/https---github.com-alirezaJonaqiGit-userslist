@@ -9,6 +9,7 @@ import EditUserForm from './editUserForm';
 import '../styles/style.css'
 
 
+
 const useStyles = makeStyles((theme) => ({
     modal: {
         display: 'flex',
@@ -43,7 +44,7 @@ export default function EditUserModal(props) {
     };
 
     return (
-        <div>
+        <div dir='rtl'>
             <Button onClick={handleOpen} variant="contained" color="primary">ویرایش</Button>
             <Modal
                 aria-labelledby="transition-modal-title"

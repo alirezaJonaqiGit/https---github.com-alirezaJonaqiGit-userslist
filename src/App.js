@@ -9,7 +9,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className='container'>
+      <div  className='container'>
         <h1 className='text-center my-3'>لیست کاربران</h1>
         <UsersTable />
       </div>    

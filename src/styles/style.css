@@ -1,3 +1,12 @@
+* {
+    direction: rtl!important;
+    /* text-align: right!important; */
+}
+body {
+    direction: rtl!important;
+    padding-bottom: 5rem;
+    text-align: right;
+}
 .textField {
     width: 100%;
     margin: .5rem 0!important;
@@ -5,7 +14,4 @@
 }
 .submitFormBtn {
     margin-top: 2rem;
-}
-body {
-    padding-bottom: 5rem;
 }
