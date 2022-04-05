@@ -16,12 +16,6 @@ import AddUserModal from './addUserModal';
 const useStyles = makeStyles({
     table: {
         minWidth: 650,
-    },
-    tableRow: {
-    },
-    tableCell: {
-        direction: 'rtl!important',
-        textAlign: 'right!important',
     }
 });
 
@@ -47,9 +41,9 @@ export default function UsersTable() {
             <Table dir='rtl' className={classes.table} aria-label="simple table">
                 <TableHead>
                     <TableRow className={classes.tableRow}>
-                        <TableCell className={classes.tableCell}>نام کاربری</TableCell>
-                        <TableCell className={classes.tableCell}>شماره</TableCell>
-                        <TableCell className={classes.tableCell}>
+                        <TableCell>نام کاربری</TableCell>
+                        <TableCell>شماره</TableCell>
+                        <TableCell>
                             
                             <AddUserModal users={users} setUsers={setUsers} />
                         
@@ -59,9 +53,9 @@ export default function UsersTable() {
                 <TableBody>
                     {users.map((user, index) => (
                         <TableRow  key={index}>
-                            <TableCell className={classes.tableCell}>{`${user.first_name} ${user.last_name}`}</TableCell>
-                            <TableCell className={classes.tableCell}>{user.id}</TableCell>
-                            <TableCell className={classes.tableCell}>
+                            <TableCell>{`${user.first_name} ${user.last_name}`}</TableCell>
+                            <TableCell>{user.id}</TableCell>
+                            <TableCell>
                                 <EditUserModal users={users} user={user} setUsers={setUsers} />
                             </TableCell>
                         </TableRow>
